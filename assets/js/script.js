@@ -26,7 +26,7 @@ function getWeather(data) {
             cityNameEl.text(currentCity);
             currentConditionsEl.append(cityNameEl);
             
-           
+            // Used moment for present date & time
             var currentCityDate = data.current.dt;
             currentCityDate = moment.unix(currentCityDate).format("MM/DD/YYYY");
             var currentDateEl = $('<span>');
