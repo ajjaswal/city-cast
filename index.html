@@ -20,7 +20,26 @@
     <h1>City Weather Dashboard</h1>
   </div>
 
- 
+  <div class="row">
+      
+    <!--Search Form-->
+      <div class="column col-3">
+        <form>
+          <label class="text-primary">Search for your City:</label>
+          <input class="form-control my-2 text-primary" type="search" placeholder="Search" id="city-input">
+          <button class="btn btn-outline-primary my-2" style="width: 100%" type="submit" id="search-button">Enter City</button>
+        </form>
+
+        <button class="btn btn-outline-primary my-2" style="width: 100%" type="submit" id="clear-button">Clear History</button>
+        
+        <!--Past searches-->
+        <div class="border-top border-primary" id="past-searches">
+         
+        </div>
+
+      </div>
+
+    
 </body>
 
 
