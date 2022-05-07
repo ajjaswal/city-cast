@@ -33,3 +33,32 @@ function getWeather(data) {
             currentDateEl.text(` (${currentCityDate}) `);
             cityNameEl.append(currentDateEl);
 
+            // Display city temperature
+            var currentCityTemp = data.current.temp;
+            var currentTempEl = $('<p>')
+            currentTempEl.text(`Temp: ${currentCityTemp}°F`)
+            currentConditionsEl.append(currentTempEl);
+            
+            // Display wind speed
+            var currentCityWind = data.current.wind_speed;
+            var currentWindEl = $('<p>')
+            currentWindEl.text(`Wind: ${currentCityWind} MPH`)
+            currentConditionsEl.append(currentWindEl);
+
+            // Display humidity %
+            var currentCityHumidity = data.current.humidity;
+            var currentHumidityEl = $('<p>')
+            currentHumidityEl.text(`Humidity: ${currentCityHumidity}%`)
+            currentConditionsEl.append(currentHumidityEl);
+
+            // Display UV
+            var currentCityUV = data.current.uvi;
+            var currentUvEl = $('<p>');
+            var currentUvSpanEl = $('<span>');
+            currentUvEl.append(currentUvSpanEl);
+
+            currentUvSpanEl.text(`UV: ${currentCityUV}`)
+
+            currentConditionsEl.append(currentUvEl);
+
+            
